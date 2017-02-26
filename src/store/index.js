@@ -12,6 +12,11 @@ var store = new Vuex.Store({
     timeUpdate(state, timeEntry){
       state.timeEntries.push(timeEntry)
       state.totalTime += timeEntry.totalTime
+    },
+    deleteTime(state, timeEntry){
+      let index = state.timeEntries.indexOf(timeEntry);
+    	state.timeEntries.splice(index, 1);
+    	state.totalTime -= timeEntry.totalTime;
     }
   }
 })

@@ -75,7 +75,6 @@ import store from '../store'
       deleteTimeEntry(timeEntry) {
         // Get the index of the clicked time entry and splice it out
         console.log("deleteTimeEntry", timeEntry)
-        let index = this.timeEntries.indexOf(timeEntry)
         if (window.confirm('Are you sure you want to delete this time entry?')) {
           store.commit('deleteTime', timeEntry)
         }
